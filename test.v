@@ -96,7 +96,6 @@ initial begin
     #1;
     if (memory !== 8'b00000011) begin
         $display("FAILED test. Should retain previous value");
-        $display("Expected Output: %b, Actual Output: %b", 8'b00000011, memory);
         $finish;
     end
     #1;

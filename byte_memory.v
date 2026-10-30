@@ -4,7 +4,7 @@ module byte_memory (
     output reg [7:0] memory
 );
 
-always @(data, memory) begin
+always @(*) begin
     if (store)
         memory <= data;
 end

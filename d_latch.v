@@ -6,13 +6,9 @@ module d_latch(
 );
 
 always @(D, E) begin
-    if (D && E) begin
-        Q <= ~(~(D && E) && NotQ);
+    if (E) begin
+        Q <= D;
         NotQ <= ~Q;
-    end
-    else if (~D && E) begin
-        NotQ <= ~(~(~D && E) && Q);
-        Q <= ~NotQ;
     end
 
 end
